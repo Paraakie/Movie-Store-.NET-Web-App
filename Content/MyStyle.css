@@ -1,0 +1,133 @@
+﻿/*Main Style Page*/
+
+/*
+ * Other Stuff 
+ */
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+html {
+    animation: fadeIn 1.5s;
+}
+
+/*
+ * General Tags
+ */
+body {
+    margin: 0;
+    background-color: #ADD8E6; /* Light Blue */
+    background-image: url("background2.jpg"); /* Background */
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 12px;
+    text-rendering: optimizeLegibility;
+    color: #515151;
+    max-width: 1024px;
+}
+
+/* Assign font-weight to all used text tags*/
+h1, h2, h3, h5, p, a {
+    font-weight: normal;
+}
+
+/* Removes default button and link decorations */
+button, a {
+    background: none;
+    color: black;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+    text-decoration: none;
+}
+/* Give links hover color, so that user knows, the buttons are clickable*/
+a:hover, button:hover {
+    color: dodgerblue;
+}
+
+ul li {
+    display: inline;
+    list-style: none;
+}
+
+/* Class that alligns text right */
+.align_right {
+    text-align: right;
+}
+
+/*
+ * Section Specific
+ */
+
+/* Everything but the Background */
+#section {
+    margin: 50px auto auto 50px;
+    background-color: white;
+    padding: 1% 3% 1% 3%;
+    border-radius: 10px;
+    min-height: 800px;
+    max-width: 1000px;
+}
+
+
+/* Header */
+h1 {
+    color: black;
+    font-size: 30px;
+    margin-bottom: 20px;
+    text-decoration: none;
+}
+
+h5, h3 {
+    color: #444; /* Brighter Grey */
+    font-style: italic;
+    margin-top: 5px;
+}
+
+/* Menu */
+.navbar {
+    /* Border around the nav */
+    border-bottom: 2px solid #ddd; /* Shade of Grey*/
+    border-top: 2px solid #ddd; /* Shade of Grey */
+    color: #444; /* Brighter Grey */
+    line-height: 2.7;
+}
+
+.navbar a, .navbar button {
+    margin-right: 20px;
+}
+
+
+/* Content */
+#body-content {
+    margin: 0 40px 0 40px;
+}
+
+/* Log-ing and Account Details */
+.login_partial {
+    max-width: 200px;
+    border-bottom: 2px solid #ddd; /* Shade of Grey*/
+}
+
+/* Using this from bootstrap.css to make list of items look nicer by giving them extra padding*/
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3,
+.col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, 
+.col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, 
+.col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, 
+.col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+    position: relative;
+    min-height: 1px;
+    padding: 5px 15px 5px 15px;
+}
+
+/* Give Textboxes a next look*/
+.text-box {
+    border-radius: 1px;
+}
+
+.pagination li {
+    padding-right: 7px;
+}

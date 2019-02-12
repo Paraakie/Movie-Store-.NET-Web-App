@@ -1,0 +1,10 @@
+﻿@model MovieStore.ViewModels.BasketSummaryViewModel
+
+
+<ul class="navbar">
+    <li>
+        @Html.ActionLink("Your Basket: "+ Model.NumberOfItems + " item(s))" + HttpUtility.HtmlDecode(
+       Html.DisplayFor(model=>Model.TotalCost).ToString()), "Index", "Basket")
+    </li>
+</ul>
+

@@ -1,0 +1,65 @@
+﻿@{
+    ViewBag.Title = "Movie Shopster";
+}
+
+@*
+    Sven Gerhards, 15031719
+    Assignment 2, 158258
+*@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+    <div id="section">
+        <div id="nav">
+            <div id="navbar-header">
+                <button type="button" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                </button>
+                <h1>@Html.ActionLink("Movie Shopster", "Index", "Home", new { area = "" }, new { })</h1>
+                <h4>by Sven Gerhards</h4>
+            </div>
+            <ul class="navbar">
+                <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                <li>@Html.ActionLink("About", "About", "Home")</li>
+                <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                <li>@Html.ActionLink("Shop by Category", "Index", "Categories")</li>
+                <li>@Html.RouteLink("View all our Products", "ProductsIndex")</li>
+                @if (Request.IsAuthenticated && User.IsInRole("Admin")) // only visible if Admin
+                {
+                    <li>@Html.ActionLink("Admin", "Index", "Admin")</li>
+                }
+            </ul>
+
+            @using (Html.BeginRouteForm("ProductsIndex", FormMethod.Get, new { @class = "navbar-form navbar-left" }))
+            {
+                <div class="align_right">
+                    @Html.TextBox("Search", null, new { @placeholder = "Search Products" })
+                    <button type="submit">Submit</button>
+                </div>
+            }
+            @Html.Partial("_LoginPartial")
+            @Html.Action("Summary", "Basket")
+        </div>
+        <div id="body-content">
+            @RenderBody()
+            <hr />
+            <footer>
+                <p>&copy; @DateTime.Now.Year - @ViewBag.Title</p>
+            </footer>
+        </div>
+
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")
+        @RenderSection("scripts", required: false)
+    </div>
+</body>
+</html>
