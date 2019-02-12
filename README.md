@@ -3,7 +3,7 @@ by Sven Gerhards
 
 A Microsoft ASP.NET Web Application created using the Entity Framework.
 Using a MVC pattern
-Languages used:
+Languages used:\n
 -> C#
 -> Javascript
 -> HTML5
