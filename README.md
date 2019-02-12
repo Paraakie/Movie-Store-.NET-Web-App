@@ -1,9 +1,9 @@
 # MovieStore
-<h4>by Sven Gerhards</h4>
+<h5>by Sven Gerhards</h5>
 
-<p>A Microsoft ASP.NET Web Application created using the Entity Framework.</p>
-<p>Using a MVC pattern</p>
-<p>Languages used:</p>
+<p>A Microsoft ASP.NET Web Application created using the Entity Framework<br/>
+and a MVC pattern</p>
+<h3>Languages used:</h3>
 <ul>
   <li> C#</li>
   <li> Javascript</li>
@@ -11,7 +11,7 @@
   <li> CSS</li>
 </ul>
 
-<p>Features:</p>
+<h3>Features:</h3>
 <p>Account system with multiple roles</p>
 <ul>
   <li> User role can create custom account and buy items</li>
