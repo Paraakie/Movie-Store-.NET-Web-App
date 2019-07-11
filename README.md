@@ -3,6 +3,7 @@
 
 ![Shopping Site](http://paraakie.com/images/github/MovieStore_ShopSite.png)
 
+
 <p>A Microsoft ASP.NET Web Application created using the Entity Framework<br/>
 and a MVC pattern</p>
 <h3>Languages used:</h3>
